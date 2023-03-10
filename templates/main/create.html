@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block title %}Create Resume{% endblock %}
+
+{% block content %}
+<!--style="background-color: #9A616D;"-->
+
+ <section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Create your Resume in Minutes</h2>
+                        <hr class="divider" />
+                        <p class="text-muted mb-5">
+                            Fill in your details as needed. Fields marked with * are required.
+                        </p>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <form id="contactForm" method="post">
+                        {% csrf_token %}
+                        <!-- Basic info -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.full_name }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.title }}
+                                </div>
+                            </div>
+
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.email }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.phone }}
+                                </div>
+                            </div>
+
+                            <div class="form-floating mb-3 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.address }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Profile -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-12">
+                                <div class="form-group">
+                                    {{ form.profile }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Skills -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.skills_1 }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.skills_2 }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.skills_3 }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.skills_4 }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.skills_5 }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.skills_6 }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience one -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-3">
+                                <div class="form-group">
+                                    {{ form.experience_1_title }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.experience_1_duration }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.experience_1_organization }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-5">
+                                <div class="form-group">
+                                    {{ form.experience_1_description }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience two -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-3">
+                                <div class="form-group">
+                                    {{ form.experience_2_title }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.experience_2_duration }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.experience_2_organization }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-5">
+                                <div class="form-group">
+                                    {{ form.experience_2_description }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience one -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-3">
+                                <div class="form-group">
+                                    {{ form.experience_3_title }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.experience_3_duration }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-2">
+                                <div class="form-group">
+                                    {{ form.experience_3_organization }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-5">
+                                <div class="form-group">
+                                    {{ form.experience_3_description }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Education one -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.education_1 }}
+                                </div>
+                            </div>
+                             <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.education_1_degree }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.education_1_duration }}
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Education two -->
+                        <div class="row">
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.education_2 }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.education_2_degree }}
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3 col-lg-4">
+                                <div class="form-group">
+                                    {{ form.education_2_duration }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button-->
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">
+                                Create Resume
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+<script>
+setTimeout(() => {
+    const alerts = document.querySelectorAll(".alert");
+    alerts.forEach(alert => {
+        alert.style.display = 'none';
+    });
+}, 5000);
+</script>
+{% endblock %}
+{% bootstrap_form form %}
